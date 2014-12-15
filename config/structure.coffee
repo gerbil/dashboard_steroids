@@ -3,7 +3,7 @@
 module.exports =
 
   rootView:
-    location: "alarms#index"
+    location: "alarms#serverList"
 
   drawers:
     left:

@@ -3,3 +3,113 @@
   text-align: center;
   font-weight: 600;
 }
+
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en");
+
+/* BG */
+body {
+    background-color: #f2f2f3;
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: #676a6c;
+    overflow-x: hidden;
+}
+
+
+/* ALARMS */
+#alarms .row {
+    margin: 0px !important;
+}
+
+#alarms table {
+    cursor: pointer;
+}
+
+#alarms table tr {
+
+}
+
+.ibox {
+    clear: both;
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.ibox:after,
+.ibox:before {
+    display: table;
+}
+
+.ibox-title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffff;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 4px 0px 0;
+    color: inherit;
+    margin-bottom: 0;
+    padding: 5px 15px 7px 25px;
+    height: 48px;
+    text-transform: uppercase;
+}
+
+.ibox-content {
+    background-color: #ffffff;
+    color: inherit;
+    padding: 15px 20px 5px 20px;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0px;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.big {
+    font-size: 16px;
+}
+
+.progress {
+    margin-bottom: 2px;
+}
+
+.progress .bar {
+    height: 100%;
+    background-image: linear-gradient(to bottom, #149bdf, #0480be);
+    background-repeat: repeat-x;;
+}
+
+.modalAlert {
+    margin: 20px;
+}
+
+div > select {
+    margin-top: 7px;
+}
+
+div > input[type="radio"] {
+    margin-top: 12px;
+}
+
+.achtung {
+    color: red;
+}
+
+.danger {
+    background-image: linear-gradient(to bottom, #df3829, #df4e3e) !important;
+}
+
+.glyphicon {
+    margin-top: 4px;
+}

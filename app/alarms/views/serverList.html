@@ -1,0 +1,21 @@
+<div ng-controller="AlarmsController">
+
+    <super-navbar>
+        <super-navbar-title>
+            Server list
+        </super-navbar-title>
+    </super-navbar>
+
+
+    <div class="list">
+
+        <a ng-repeat="server in serverList" class="item item-icon-left item-icon-right" href="alarmsList.html?server={{server}}">
+            <i class="icon super-ios7-speedometer-outline"></i>
+            <i class="icon super-ios7-arrow-right"></i>
+            {{server}}
+            <!-- <span class="badge badge-assertive">2</span>-->
+        </a>
+
+
+    </div>
+</div>
