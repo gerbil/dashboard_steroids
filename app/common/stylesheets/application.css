@@ -13,21 +13,15 @@ body {
     font-size: 13px;
     color: #676a6c;
     overflow-x: hidden;
+    font-size: 8px;
 }
 
 
 /* ALARMS */
-#alarms .row {
-    margin: 0px !important;
+.alarmInfo label, .alarmInfo textarea, .alarmInfo .btn {
+    font-size: 8px;
 }
 
-#alarms table {
-    cursor: pointer;
-}
-
-#alarms table tr {
-
-}
 
 .ibox {
     clear: both;
