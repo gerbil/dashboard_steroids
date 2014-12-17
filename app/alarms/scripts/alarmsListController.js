@@ -79,11 +79,12 @@ angular
 
     })
 
-    .controller('AlarmsListController', function ($scope, supersonic) {
+    .controller('AlarmsListController', function ($scope, supersonic, Alarms) {
         supersonic.ui.views.current.whenVisible( function(){
             var server = steroids.view.params.server;
             $scope.server = server;
-            console.log(steroids.view.params);
+            console.info('server is: ' + steroids.view.params.server);
+
         });
     })
 
