@@ -32,4 +32,8 @@ angular
             steroids.layers.push(AlarmsList);
         };
 
+        var webView = new steroids.views.WebView({location: "app/alarms/alarmsList.html?server=test", id:"testAlarmsView"});
+        webView.preload();
+
+
     });
