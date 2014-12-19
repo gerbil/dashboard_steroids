@@ -1,11 +1,5 @@
 <div ng-controller="alarmsListController">
 
-    <super-navbar>
-        <super-navbar-title>
-            Alarms list
-        </super-navbar-title>
-    </super-navbar>
-
     <div class="list card">
         <a ng-repeat="alarm in alarmsList" class="item item-icon-left item-icon-right" ng-click="openModal(alarm.ID)">
             <i class="icon {{(alarm.STATUS == 'ALARM' && alarm.ACTIVE == 'YES') ? 'super-ios7-close-empty' : 'super-ios7-checkmark-empty'}}"></i>
@@ -13,8 +7,6 @@
             {{alarm.CHECKNAME}}
             <!--  <span class="badge badge-assertive">2</span>  -->
         </a>
-
-
     </div>
 
 </div>

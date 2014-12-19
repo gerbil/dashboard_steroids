@@ -22,6 +22,18 @@ body {
     font-size: 8px;
 }
 
+.navBar {
+
+}
+
+.navBar .title {
+
+}
+
+.navBar .menuBtn {
+    background: url('/icons/menu.svg') no-repeat;
+    height: 50px;
+}
 
 .ibox {
     clear: both;

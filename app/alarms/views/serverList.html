@@ -1,21 +1,18 @@
 <div ng-controller="ServerListController">
 
-    <super-navbar>
-        <super-navbar-title>
-            Server list
-        </super-navbar-title>
-    </super-navbar>
-
+    <div class="navBar">
+        <div class="menuBtn" ng-click="openMenu()"></div>
+        <div class="title"></div>
+        <div class="settings"></div>
+    </div>
 
     <div class="list">
-
         <a ng-repeat="server in serverList" class="item item-icon-left item-icon-right" href="alarmsList.html?server={{server}}">
             <i class="icon super-ios7-speedometer-outline"></i>
             <i class="icon super-ios7-arrow-right"></i>
             {{server}}
             <!-- <span class="badge badge-assertive">2</span>-->
         </a>
-
-
     </div>
+
 </div>

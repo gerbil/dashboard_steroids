@@ -4,20 +4,20 @@ module.exports =
   app:
     name: "dashboard_steroids"
 
-  # network:
-  #   extraResponseHeaders:
-  #     "Access-Control-Allow-Origin": "*"
-  #     "Access-Control-Allow-Headers": "Content-Type, X-Requested-With"
+  network:
+     extraResponseHeaders:
+       "Access-Control-Allow-Origin": "*"
+       "Access-Control-Allow-Headers": "Content-Type, X-Requested-With"
 
   webView:
-    viewsIgnoreStatusBar: false
+    viewsIgnoreStatusBar: true
     enableDoubleTapToFocus: false
-    disableOverscroll: false
+    disableOverscroll: true
     enableViewportScale: false
     enablePopGestureRecognition: true
     allowInlineMediaPlayback: true
 
   # Applies on iOS only
   statusBar:
-    enabled: true
+    enabled: false
     style: "default"

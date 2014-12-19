@@ -14,9 +14,15 @@ angular
     })
     .controller('ServerListController', function ($scope, supersonic, $resource, Alarms) {
 
+        steroids.on('ready', supersonic.ui.navigationBar.hide());
+
         // Get all servers from backend alarms factory API
         Alarms.list(function (data) {
             $scope.serverList = data.servers;
         });
+
+        $scope.openMenu = function () {
+            steroids.drawers.show();
+        };
 
     });
