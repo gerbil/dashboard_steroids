@@ -1,13 +1,13 @@
 <div ng-controller="ServerListController">
 
-    <div class="navBar">
-        <div class="menuBtn" ng-click="openMenu()"></div>
-        <div class="title"></div>
-        <div class="settings"></div>
+    <div class="navBar row">
+        <div class="menuBtn col col-10" ng-click="openMenu()"></div>
+        <div class="title col-80" ng-bind="viewTitle"></div>
+        <div class="settingsBtn col-10" ng-click="openSettings()"></div>
     </div>
 
     <div class="list">
-        <a ng-repeat="server in serverList" class="item item-icon-left item-icon-right" href="alarmsList.html?server={{server}}">
+        <a ng-repeat="server in serverList" class="item item-icon-left item-icon-right" ng-click="openAlarmsList(server)">
             <i class="icon super-ios7-speedometer-outline"></i>
             <i class="icon super-ios7-arrow-right"></i>
             {{server}}

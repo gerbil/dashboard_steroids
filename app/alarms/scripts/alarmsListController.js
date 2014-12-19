@@ -29,9 +29,15 @@ angular
             }
         });
 
+        $scope.viewTitle = 'Alarms list';
+
+        $scope.openMenu = function () {
+            steroids.layers.pop();
+        };
+
         $scope.openModal = function(id) {
             var alarmInfoView = new steroids.views.WebView('app/alarms/alarmInfo.html?server='+$scope.server+'&id='+id);
             steroids.modal.show(alarmInfoView);
-        }
+        };
 
     });

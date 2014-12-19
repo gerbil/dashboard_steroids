@@ -1,15 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Ek+Mukta:200,400);
+
 .supersonic-navbar-mock {
   background-color: #00B5FF !important;
   text-align: center;
   font-weight: 600;
 }
 
-@import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en");
-
 /* BG */
 body {
     background-color: #f2f2f3;
-    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Ek Mukta', sans-serif;
     font-size: 13px;
     color: #676a6c;
     overflow-x: hidden;
@@ -23,16 +23,31 @@ body {
 }
 
 .navBar {
-
+    background: #058599;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
 }
 
 .navBar .title {
-
+    color: #ffffff;
+    font-size: 26px;
+    text-align: center;
+    font-family: 'Ek Mukta', sans-serif;
 }
 
 .navBar .menuBtn {
     background: url('/icons/menu.svg') no-repeat;
-    height: 50px;
+    margin-top: 6px;
+}
+
+.navBar .backBtn {
+    background: url('/icons/back.svg') no-repeat;
+    margin-top: 6px;
+}
+
+.navBar .settingsBtn {
+    background: url('/icons/settings.svg') no-repeat;
+    margin-top: 4px;
 }
 
 .ibox {

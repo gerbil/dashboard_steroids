@@ -1,12 +1,21 @@
-<div ng-controller="IndexController">
+<div ng-controller="menuController">
 
-    <div class="padding">
-
-        <ul class="list">
-            <li class="item" ng-repeat="server in serverList">
-                {{server}}
-            </li>
-        </ul>
-
+    <div class="list">
+        <a href="#" class="item item-icon-left item-icon-right">
+            <i class="icon super-ios7-analytics-outline  "></i>
+            <span class="badge badge-assertive">1</span>
+            Stats
+        </a>
+        <a href="#" class="item item-icon-left item-icon-right">
+            <i class="icon super-ios7-speedometer-outline"></i>
+            <span class="badge badge-assertive">2</span>
+            Alarms
+        </a>
+        <a href="#" class="item item-icon-left item-icon-right">
+            <i class="icon super-ios7-checkmark-outline"></i>
+            <span class="badge badge-assertive">4</span>
+            Jenkins
+        </a>
     </div>
+
 </div>
