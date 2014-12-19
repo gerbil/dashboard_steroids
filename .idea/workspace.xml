@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0655a8f2-959e-4c68-b7f6-d368e826a053" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\jurijkob\WebstormProjects\dashboard_steroids\app\alarms\scripts\ServerListController.js" afterPath="$PROJECT_DIR$/app/alarms/scripts/serverListController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/alarms/views/alarmsList.html" afterPath="$PROJECT_DIR$/app/alarms/views/alarmsList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.coffee" afterPath="$PROJECT_DIR$/config/app.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/common/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/assets/icons/home.svg" afterPath="$PROJECT_DIR$/app/common/assets/icons/home.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/alarms/index.js" afterPath="$PROJECT_DIR$/app/alarms/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/views/layout.html" afterPath="$PROJECT_DIR$/app/common/views/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/alarms/views/serverList.html" afterPath="$PROJECT_DIR$/app/alarms/views/serverList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dashboard_steroids.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,8 +28,8 @@
       <file leaf-file-name="serverListController.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/alarms/scripts/serverListController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7116279" vertical-offset="0" max-vertical-offset="645">
-              <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.13178295" vertical-offset="0" max-vertical-offset="645">
+              <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -432,10 +424,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1186" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3620853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3620853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -808,8 +800,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/alarms/scripts/serverListController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7116279" vertical-offset="0" max-vertical-offset="645">
-          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.13178295" vertical-offset="0" max-vertical-offset="645">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding />
         </state>
       </provider>
