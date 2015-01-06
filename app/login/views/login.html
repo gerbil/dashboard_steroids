@@ -1,0 +1,35 @@
+<div ng-controller="loginController">
+
+    <super-navbar>
+        <super-navbar-title>
+            lonin
+        </super-navbar-title>
+    </super-navbar>
+
+    <div class="center">
+        <div class="flat-form">
+            <div id="login" class="form-action show">
+                <h1>Provident login</h1>
+
+                <p>
+                    In order to use Provident app you must first connect to a VPN network!
+                </p>
+
+                <form>
+                    <ul>
+                        <li>
+                            <input type="text" placeholder="Username" ng-model="username"/>
+                        </li>
+                        <li>
+                            <input type="password" placeholder="Password" ng-model="password"/>
+                        </li>
+                        <li>
+                            <input type="submit" value="Login" class="button" ng-click="login()"/>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
