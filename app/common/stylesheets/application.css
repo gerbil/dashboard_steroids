@@ -134,3 +134,62 @@ div > input[type="radio"] {
 .glyphicon {
     margin-top: 4px;
 }
+
+/* LOGIN */
+.center {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.flat-form {
+    background: #0480be;
+    margin: 25px auto;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    color: #ffffff;
+    padding: 25px;
+    font-size: 14px;
+}
+.flat-form form input[type=text],
+.flat-form form input[type=text],
+.flat-form form input[type=password] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    padding-top: 5px;
+    background: #fff;
+    border: none;
+    color: #149bdf;
+    outline: none;
+}
+.flat-form form input[type=submit] {
+    width: 100%;
+}
+.flat-form .button {
+    border: none;
+    display: block;
+    background: #136899;
+    height: 40px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    transition: all 0.15s linear;
+}
+.flat-form ::-webkit-input-placeholder {
+    color: #149bdf;
+}
+.flat-form :-moz-placeholder {
+    /* Firefox 18- */
+    color: #149bdf;
+}
+.flat-form ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #149bdf;
+}
+.flat-form :-ms-input-placeholder {
+    color: #149bdf;
+}
