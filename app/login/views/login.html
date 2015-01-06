@@ -1,11 +1,5 @@
 <div ng-controller="loginController">
 
-    <super-navbar>
-        <super-navbar-title>
-            lonin
-        </super-navbar-title>
-    </super-navbar>
-
     <div class="center">
         <div class="flat-form">
             <div id="login" class="form-action show">
@@ -15,16 +9,16 @@
                     In order to use Provident app you must first connect to a VPN network!
                 </p>
 
-                <form>
+                <form name="loginForm" novalidate>
                     <ul>
                         <li>
-                            <input type="text" placeholder="Username" ng-model="username"/>
+                            <input type="text" placeholder="Username" name="username" ng-model="username" />
                         </li>
                         <li>
-                            <input type="password" placeholder="Password" ng-model="password"/>
+                            <input type="password" placeholder="Password" name="password" ng-model="password" />
                         </li>
                         <li>
-                            <input type="submit" value="Login" class="button" ng-click="login()"/>
+                            <input type="submit" value="Login" class="button" ng-disabled="loginForm.$pristine" ng-click="login()"/>
                         </li>
                     </ul>
                 </form>

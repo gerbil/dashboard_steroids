@@ -3,8 +3,9 @@ angular
     .factory('Login', function ($resource) {
         return $resource(
             'http://localhost:3000/login/',
+            null,
             {
-                getApikey: {
+                getApiKey: {
                     method: 'POST'
                 }
             }
@@ -13,19 +14,17 @@ angular
     .controller('loginController', function ($scope, supersonic, $resource, Login) {
 
         $scope.login = function () {
-            Login.getApikey(function (data) {
-                console.info($scope.data);
-            });
-        };
 
-        /*
-         Login.getApiKey({username: $scope.username, password: $scope.password},
-         function () {
-         //navigator.notification.alert('Done', '', 'Success', apikey);
-         console.info(apikey);
-         }, function (error) {
-         //navigator.notification.alert('Not done', '', 'Fail', error);
-         console.info(error);
-         });*/
+            Login.getApiKey({username: $scope.username, password: $scope.password},
+                function (data) {
+                    console.info(data.apikey);
+                    $scope.loginForm.username.$setValidity('', true);
+                    $scope.loginForm.password.$setValidity('', true);
+                },
+                function () {
+                   $scope.loginForm.username.$setValidity('', false);
+                   $scope.loginForm.password.$setValidity('', false);
+                })
+        };
 
     });

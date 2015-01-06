@@ -193,3 +193,6 @@ div > input[type="radio"] {
 .flat-form :-ms-input-placeholder {
     color: #149bdf;
 }
+.flat-form input.ng-invalid {
+    border: 1px solid red !important;
+}
