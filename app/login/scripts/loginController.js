@@ -17,12 +17,12 @@ angular
         var apikey = window.localStorage.getItem('apikey');
 
         if (typeof(apikey) != 'undefined') {
-            var serverList = new steroids.views.WebView('app/alarms/serverList.html');
-            steroids.layers.push(serverList);
+            //var serverList = new steroids.views.WebView('app/alarms/serverList.html');
+            //steroids.layers.push(serverList);
         }
 
         $scope.login = function () {
-            Login.getApiKey({username: $scope.username, password: $scope.password},
+            /*Login.getApiKey({username: $scope.username, password: $scope.password},
                 function (data) {
                     // Success login, let's save apikey to localstorage
                     window.localStorage.setItem('apikey', data.apikey);
@@ -36,7 +36,12 @@ angular
                 function () {
                     $scope.loginForm.username.$setValidity('', false);
                     $scope.loginForm.password.$setValidity('', false);
-                })
+                })*/
+
+            // TEST PURPOSES ONLY!
+            window.localStorage.setItem('apikey', 'U477y8RHQd');
+            var serverList = new steroids.views.WebView('app/alarms/serverList.html');
+            steroids.layers.push(serverList);
         };
 
     });

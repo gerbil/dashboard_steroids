@@ -34,8 +34,14 @@ angular
 
         $scope.viewTitle = 'Alarms list';
 
-        $scope.openMenu = function () {
+        $scope.back = function () {
             steroids.layers.pop();
+        };
+
+        $scope.openSettings = function () {
+            supersonic.ui.drawers.open('right').then(function () {
+                //supersonic.logger.info('Drawer was shown');
+            });
         };
 
         $scope.openModal = function(id) {
