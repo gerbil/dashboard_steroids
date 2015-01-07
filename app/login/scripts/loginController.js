@@ -2,7 +2,7 @@ angular
     .module('login')
     .factory('Login', function ($resource) {
         return $resource(
-            'http://localhost:3000/login/',
+            'http://10.30.60.165:3000/login/',
             null,
             {
                 getApiKey: {
@@ -13,17 +13,29 @@ angular
     })
     .controller('loginController', function ($scope, supersonic, $resource, Login) {
 
-        $scope.login = function () {
+        // Check localStorage for apikey
+        var apikey = window.localStorage.getItem('apikey');
 
+        if (typeof(apikey) != 'undefined') {
+            var serverList = new steroids.views.WebView('app/alarms/serverList.html');
+            steroids.layers.push(serverList);
+        }
+
+        $scope.login = function () {
             Login.getApiKey({username: $scope.username, password: $scope.password},
                 function (data) {
-                    console.info(data.apikey);
+                    // Success login, let's save apikey to localstorage
+                    window.localStorage.setItem('apikey', data.apikey);
+                    // Clean up form fields
                     $scope.loginForm.username.$setValidity('', true);
                     $scope.loginForm.password.$setValidity('', true);
+                    // Home page push
+                    var serverList = new steroids.views.WebView('app/alarms/serverList.html');
+                    steroids.layers.push(serverList);
                 },
                 function () {
-                   $scope.loginForm.username.$setValidity('', false);
-                   $scope.loginForm.password.$setValidity('', false);
+                    $scope.loginForm.username.$setValidity('', false);
+                    $scope.loginForm.password.$setValidity('', false);
                 })
         };
 

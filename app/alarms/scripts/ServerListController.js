@@ -2,7 +2,7 @@ angular
     .module('alarms')
     .factory('Alarms', function ($resource) {
         return $resource(
-            'http://localhost:3000/alarms/:server/:action/:id',
+            'http://10.30.60.165:3000/alarms/:server/:action/:id',
             {server: '@server'},
             {
                 list: {
@@ -31,13 +31,24 @@ angular
 
         steroids.on('ready', supersonic.ui.navigationBar.hide());
 
+        // Check localStorage for apikey
+        var apikey = window.localStorage.getItem('apikey');
+
         // Get all servers from backend alarms factory API
-        Alarms.list({apikey: 'asdasjsdgfjkjhg'}, function (data) {
+        Alarms.list({apikey: apikey}, function (data) {
             $scope.serverList = data.servers;
         });
 
         $scope.openMenu = function () {
-            steroids.drawers.show();
+            supersonic.ui.drawers.open('left').then(function () {
+                supersonic.logger.debug('Drawer was shown');
+            });
+        };
+
+        $scope.openSettings = function () {
+            supersonic.ui.drawers.open('right').then(function () {
+                supersonic.logger.debug('Drawer was shown');
+            });
         };
 
         $scope.openAlarmsList = function (server) {
@@ -47,6 +58,5 @@ angular
 
         var webView = new steroids.views.WebView({location: "app/alarms/alarmsList.html?server=test", id: "testAlarmsView"});
         webView.preload();
-
 
     });

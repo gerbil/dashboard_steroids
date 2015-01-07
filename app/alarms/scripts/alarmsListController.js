@@ -7,9 +7,12 @@ angular
             $scope.server = steroids.view.params.server;
         });
 
+        // Check localStorage for apikey
+        var apikey = window.localStorage.getItem('apikey');
+
         // Get alarms data function from factory API
         function refreshData() {
-            Alarms.query({server: $scope.server}, function (data) {
+            Alarms.query({server: $scope.server, apikey: apikey }, function (data) {
                 $scope.alarmsList = data;
             });
         };

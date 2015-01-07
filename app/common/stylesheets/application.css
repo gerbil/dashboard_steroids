@@ -137,7 +137,7 @@ div > input[type="radio"] {
 
 /* LOGIN */
 .center {
-    width: 700px;
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -158,7 +158,7 @@ div > input[type="radio"] {
     height: 40px;
     margin-bottom: 10px;
     padding-left: 15px;
-    padding-top: 5px;
+    padding-top: 7px;
     background: #fff;
     border: none;
     color: #149bdf;

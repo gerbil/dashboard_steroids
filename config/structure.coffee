@@ -4,14 +4,19 @@ module.exports =
 
   rootView:
     location: "alarms#serverList"
+    #location: "login#login"
 
   drawers:
     left:
-      id: "leftDrawer"
-      location: "alarms#drawer"
+      id: "menu"
+      location: "menu#menu"
       showOnAppLoad: false
     options:
       animation: "swingingDoor"
+    right:
+      id: "settings"
+      location: "settings#settings"
+      showOnAppLoad: false
 
 # See styling options for tabs and other native components in app/common/native-styles/ios.css or app/common/native-styles/android.css
 #  tabs: [
