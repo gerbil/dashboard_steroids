@@ -1,29 +1,30 @@
 <div ng-controller="loginController">
 
-    <div class="center">
-        <div class="flat-form">
-            <div id="login" class="form-action show">
-                <h1>Provident login</h1>
+    <div id="login">
+        <div class="center">
+            <div class="flat-form">
+                <div class="form-action show">
+                    <h1>Provident app</h1>
 
-                <p>
-                    In order to use Provident app you must connect to a TELE2 VPN network!
-                </p>
+                    <p>
+                        In order to use Provident app you must connect to a TELE2 VPN network!
+                    </p>
 
-                <form name="loginForm" novalidate>
-                    <ul>
-                        <li>
-                            <input type="text" placeholder="Username" name="username" ng-model="username" />
-                        </li>
-                        <li>
-                            <input type="password" placeholder="Password" name="password" ng-model="password" />
-                        </li>
-                        <li>
-                            <input type="submit" value="Login" class="button" ng-disabled="loginForm.$pristine" ng-click="login()"/>
-                        </li>
-                    </ul>
-                </form>
+                    <form name="loginForm" novalidate>
+                        <ul>
+                            <li>
+                                <input type="text" placeholder="Username" name="username" ng-model="username"/>
+                            </li>
+                            <li>
+                                <input type="password" placeholder="Password" name="password" ng-model="password"/>
+                            </li>
+                            <li>
+                                <input type="submit" value="Login" class="button" ng-disabled="loginForm.$pristine" ng-click="login()"/>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-
 </div>

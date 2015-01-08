@@ -7,6 +7,9 @@ angular
             $scope.server = steroids.view.params.server;
         });
 
+        // Set a title of the page
+        $scope.alarmsListTitle = $scope.server+' ALARMS';
+
         // Check localStorage for apikey
         var apikey = window.localStorage.getItem('apikey');
 
@@ -31,8 +34,6 @@ angular
                 promise = undefined;
             }
         });
-
-        $scope.viewTitle = 'Alarms list';
 
         $scope.back = function () {
             steroids.layers.pop();

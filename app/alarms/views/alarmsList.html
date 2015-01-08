@@ -2,11 +2,11 @@
 
     <div class="navBar row">
         <div class="backBtn col col-10" ng-click="back()"></div>
-        <div class="title col-80" ng-bind="viewTitle"></div>
+        <div class="title col-80">{{alarmsListTitle | uppercase}}</div>
         <div class="settingsBtn col-10" ng-click="openSettings()"></div>
     </div>
 
-    <div class="list card">
+    <div class="list card alarms">
         <a ng-repeat="alarm in alarmsList" class="item item-icon-left item-icon-right" ng-click="openModal(alarm.ID)">
             <i class="icon {{(alarm.STATUS == 'ALARM' && alarm.ACTIVE == 'YES') ? 'super-ios7-close-empty' : 'super-ios7-checkmark-empty'}}"></i>
             <i class="icon super-ios7-arrow-down"></i>

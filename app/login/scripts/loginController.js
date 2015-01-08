@@ -23,25 +23,30 @@ angular
 
         $scope.login = function () {
             /*Login.getApiKey({username: $scope.username, password: $scope.password},
-                function (data) {
-                    // Success login, let's save apikey to localstorage
-                    window.localStorage.setItem('apikey', data.apikey);
-                    // Clean up form fields
-                    $scope.loginForm.username.$setValidity('', true);
-                    $scope.loginForm.password.$setValidity('', true);
-                    // Home page push
-                    var serverList = new steroids.views.WebView('app/alarms/serverList.html');
-                    steroids.layers.push(serverList);
-                },
-                function () {
-                    $scope.loginForm.username.$setValidity('', false);
-                    $scope.loginForm.password.$setValidity('', false);
-                })*/
+             function (data) {
+             // Success login, let's save apikey to localstorage
+             window.localStorage.setItem('apikey', data.apikey);
+             // Clean up form fields
+             $scope.loginForm.username.$setValidity('', true);
+             $scope.loginForm.password.$setValidity('', true);
+             // Home page push
+             var serverList = new steroids.views.WebView('app/alarms/serverList.html');
+             steroids.layers.push(serverList);
+             },
+             function () {
+             $scope.loginForm.username.$setValidity('', false);
+             $scope.loginForm.password.$setValidity('', false);
+             })*/
 
             // TEST PURPOSES ONLY!
             window.localStorage.setItem('apikey', 'U477y8RHQd');
-            var serverList = new steroids.views.WebView('app/alarms/serverList.html');
+
+            var serverList = new steroids.views.WebView({
+                location: 'app/alarms/serverList.html'
+            });
+
             steroids.layers.push(serverList);
         };
+
 
     });
