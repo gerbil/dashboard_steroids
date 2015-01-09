@@ -42,10 +42,11 @@ angular
             window.localStorage.setItem('apikey', 'U477y8RHQd');
 
             var serverList = new steroids.views.WebView({
-                location: 'app/alarms/serverList.html'
+                location: 'app/alarms/serverList.html',
+                id: 'serverList'
             });
 
-            steroids.layers.push(serverList);
+            steroids.layers.push({view: serverList, navigationBar: false});
         };
 
 

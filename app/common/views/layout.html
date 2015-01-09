@@ -20,7 +20,15 @@
     <script src="/components/angular-resource/angular-resource.min.js"></script>
     <script src="/components/angular-touch/angular-touch.min.js"></script>
     <script src="/components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
     <script src="/components/pace/pace.min.js"></script>
+    <script>
+        Pace.options = {
+            ajax: {
+                ignoreURLs: [/login/]
+            }
+        }
+    </script>
 
     <% _.each(yield.modules, function(module) { %>
     <script src="/app/<%= module %>.js"></script>

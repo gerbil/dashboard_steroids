@@ -31,12 +31,12 @@ module.exports =
 #   }
 # ]
 
-#  preloads: [
-#    {
-#      id: "serverList"
-#      location: "alarms#serverList"
-#    }
-#  ]
+  preloads: [
+    {
+      id: "serverList"
+      location: "alarms#serverList"
+    }
+  ]
 
 
 #

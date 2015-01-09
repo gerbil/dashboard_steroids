@@ -3,7 +3,6 @@
 
 /* BG *******************************************************************/
 body {
-    /*background-color: #f2f2f3;*/
     background: url('/background/background.jpg') no-repeat;
     font-family: 'Ek Mukta', sans-serif;
     font-size: 13px;
@@ -11,6 +10,31 @@ body {
     overflow-x: hidden;
     font-size: 8px;
 }
+
+/* LOADING PAGE *********************************************************/
+#bodyLoading {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#loadingPage {
+    /*background: #191f26;*/
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+}
+
+#loadingPage .center {
+    margin-left: auto;
+    margin-right: auto;
+    background: url('/background/loading.gif') no-repeat;
+    height: 100px;
+    width: 100px;
+}
+
 
 /* NAVIGATION BAR ********************************************************/
 
@@ -51,10 +75,6 @@ body {
 
 
 /* LOGIN *****************************************************************/
-#login {
-
-}
-
 #login .center {
     width: 300px;
     margin-left: auto;
@@ -82,7 +102,7 @@ body {
     padding-top: 7px;
     background: #136898;
     border: none;
-    color: #149bdf;
+    color: #ffffff;
     outline: none;
 }
 

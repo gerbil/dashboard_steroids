@@ -27,13 +27,8 @@ angular
 
     .controller('ServerListController', function ($scope, supersonic, $resource, Alarms) {
 
-        //steroids.on('ready', supersonic.ui.navigationBar.hide());
-
-        // Check localStorage for apikey
-        var apikey = window.localStorage.getItem('apikey');
-
         // Get all servers from backend alarms factory API
-        Alarms.list({apikey: apikey}, function (data) {
+        Alarms.list(function (data) {
             $scope.serverList = data.servers;
 
             for (var index = 0; index < $scope.serverList.length; ++index) {
@@ -43,17 +38,7 @@ angular
                     id: $scope.serverList[index]
                 });
 
-                supersonic.logger.info($scope.serverList[index]);
-
-                serverView.preload({id: $scope.serverList[index]}, {
-                    onSuccess: function () {
-                        supersonic.logger.info($scope.serverList[index] + ' view has been loaded in the background and is ready to be pushed to the layer stack');
-                    },
-                    onFailure: function () {
-                        supersonic.logger.info('Failed to preload.')
-                    }
-                });
-
+                serverView.preload({id: $scope.serverList[index]});
             }
 
         });
@@ -76,8 +61,7 @@ angular
                 location: 'app/alarms/alarmsList.html?server=' + server,
                 id: server
             });
-            steroids.layers.push({view: AlarmsList});
-
+            steroids.layers.push({view: AlarmsList, navigationBar: false});
         };
 
     });

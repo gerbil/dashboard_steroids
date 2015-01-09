@@ -7,15 +7,9 @@ angular
             $scope.server = steroids.view.params.server;
         });
 
-        // Set a title of the page
-        $scope.alarmsListTitle = $scope.server+' ALARMS';
-
-        // Check localStorage for apikey
-        var apikey = window.localStorage.getItem('apikey');
-
         // Get alarms data function from factory API
         function refreshData() {
-            Alarms.query({server: $scope.server, apikey: apikey }, function (data) {
+            Alarms.query({server: $scope.server}, function (data) {
                 $scope.alarmsList = data;
             });
         };
