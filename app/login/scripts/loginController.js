@@ -13,6 +13,20 @@ angular
     })
     .controller('loginController', function ($scope, supersonic, $resource, Login) {
 
+        supersonic.ui.drawers.updateOptions({
+            shadow: true,
+            animation: {
+                type: "slide",
+                duration: 1.0
+            },
+            gestures: {
+                open: ["PanNavBar", "PanCenterView"],
+                close: ["TapNavBar", "TapCenterview"]
+            }
+        });
+
+
+
         // Check localStorage for apikey
         var apikey = window.localStorage.getItem('apikey');
 
@@ -51,3 +65,7 @@ angular
 
 
     });
+
+//TODO - 1. Swipe gessures [SwipeDown -> refresh page content, SwipeLeft -> show option for particular row, etc]
+//TODO - 2. Main menu
+//TODO - 3. Settings [Profile, Logout]

@@ -6,14 +6,22 @@
         <div class="settingsBtn col-10" ng-click="openSettings()"></div>
     </div>
 
-    <div class="list card">
+    <!--<div class="list card">
         <a ng-repeat="server in serverList" class="item item-icon-left item-icon-right" ng-click="openAlarmsList(server)">
             <i class="icon super-ios7-speedometer-outline"></i>
             <i class="icon super-ios7-arrow-right"></i>
             {{server | uppercase}}
-            <!-- <span class="badge badge-assertive">2</span>-->
         </a>
-    </div>
+    </div>-->
 
+    <div id="serverList">
+        <ul>
+            <li ng-repeat="server in serverList" ng-click="openAlarmsList(server)">
+                <div class="{{server}} left">&nbsp;</div>
+                {{server | uppercase}}
+                <i class="icon super-ios7-arrow-right right"></i>
+            </li>
+        </ul>
+    </div>
 
 </div>

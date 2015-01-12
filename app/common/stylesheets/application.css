@@ -3,7 +3,7 @@
 
 /* BG *******************************************************************/
 body {
-    background: url('/background/background.jpg') no-repeat;
+    background: url('/background/background2.jpg') no-repeat;
     font-family: 'Ek Mukta', sans-serif;
     font-size: 13px;
     color: #676a6c;
@@ -20,7 +20,6 @@ body {
 }
 
 #loadingPage {
-    /*background: #191f26;*/
     display: table-cell;
     vertical-align: middle;
     height: 100%;
@@ -31,10 +30,9 @@ body {
     margin-left: auto;
     margin-right: auto;
     background: url('/background/loading.gif') no-repeat;
-    height: 100px;
-    width: 100px;
+    height: 500px;
+    width: 500px;
 }
-
 
 /* NAVIGATION BAR ********************************************************/
 
@@ -137,12 +135,17 @@ body {
     color: #149bdf;
 }
 
-.flat-form :-ms-input-placeholder {
+#login .flat-form :-ms-input-placeholder {
     color: #149bdf;
 }
 
-.flat-form input.ng-invalid {
+#login .flat-form input.ng-invalid {
     border: 1px solid red !important;
+}
+
+/* Ignore pace preloaded on login page */
+body.login .pace{
+    display: none !important;
 }
 
 /* ALARMS *****************************************************************/
@@ -194,4 +197,79 @@ body {
 
 .alarms .glyphicon {
     margin-top: 4px;
+}
+
+
+/* SERVER LIST **************************************************************/
+
+#serverList {
+    margin: 5px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+#serverList ul li {
+    margin-top: 10px;
+    padding: 5px 10px 5px 10px;
+    background:rgba(255,255,255,0.3);
+}
+
+
+#serverList ul li:nth-child(odd) {
+    background:rgba(255,255,255,0.4);
+}
+
+#serverList ul li:first-child {
+    margin-top: 0px;
+}
+
+
+#serverList ul li div.left {
+    width: 2%;
+    float: left;
+    margin-right: 10px;
+}
+
+#serverList ul li div.avk6b1 {
+    background: rgb(5, 133, 153);
+}
+
+#serverList ul li div.hgd0b1 {
+    background: rgb(214, 79, 42);
+}
+
+#serverList ul li div.hgd0b2 {
+    background: rgb(120, 185, 1);
+}
+
+#serverList ul li div.avos {
+    background: rgb(37, 114, 234);
+}
+
+#serverList ul li div.kstb1 {
+    background: rgb(223, 181, 1);
+}
+
+#serverList ul li div.hgdb1 {
+    background: rgb(245, 137, 3);
+}
+
+#serverList ul li div.f-other {
+    background: rgb(253, 119, 188);
+}
+
+#serverList ul li div.f-mobile {
+    background: rgb(253, 119, 188);
+}
+
+#serverList ul li div.test {
+    background: rgb(5, 133, 153);
+}
+
+#serverList ul li div.vostest {
+    background: rgb(0, 215, 203);
+}
+
+#serverList ul li i.right {
+    float: right;
 }

@@ -5,22 +5,10 @@ angular
             'http://10.30.60.165:3000/alarms/:server/:action/:id',
             {server: '@server'},
             {
-                list: {
-                    method: 'GET',
-                    isArray: false
-                },
-                add: {
-                    method: 'POST',
-                    params: {action: 'add'}
-                },
-                delete: {
-                    method: 'POST',
-                    params: {action: 'delete', id: '@id'}
-                },
-                update: {
-                    method: 'POST',
-                    params: {action: 'update', id: '@id'}
-                }
+                list: {method: 'GET', isArray: false},
+                add: {method: 'POST', params: {action: 'add'}},
+                delete: {method: 'POST', params: {action: 'delete', id: '@id'}},
+                update: {method: 'POST', params: {action: 'update', id: '@id'}}
             }
         );
     })
