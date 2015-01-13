@@ -19,7 +19,7 @@ angular
         Alarms.list(function (data) {
             $scope.serverList = data.servers;
 
-            for (var index = 0; index < $scope.serverList.length; ++index) {
+            /*for (var index = 0; index < $scope.serverList.length; ++index) {
 
                 var serverView = new steroids.views.WebView({
                     location: 'app/alarms/alarmsList.html?server=' + $scope.serverList[index],
@@ -27,7 +27,7 @@ angular
                 });
 
                 serverView.preload({id: $scope.serverList[index]});
-            }
+            }*/
 
         });
 
@@ -46,8 +46,8 @@ angular
         $scope.openAlarmsList = function (server) {
             //var AlarmsList = new steroids.views.WebView('app/alarms/alarmsList.html?server=' + server);
             var AlarmsList = new steroids.views.WebView({
-                location: 'app/alarms/alarmsList.html?server=' + server,
-                id: server
+                location: 'app/alarms/alarmsList.html?server=' + server
+                /*id: server*/
             });
             steroids.layers.push({view: AlarmsList, navigationBar: false});
         };

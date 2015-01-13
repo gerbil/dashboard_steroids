@@ -3,7 +3,7 @@
 
 /* BG *******************************************************************/
 body {
-    background: #00558F;
+    background: url('/background/background.jpg') 100% no-repeat;
     font-family: 'Ek Mukta', sans-serif;
     font-size: 13px;
     color: #676a6c;
@@ -30,8 +30,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     background: url('/background/loading.gif') 100% no-repeat;
-    height: 125px;
-    width: 125px;
+    height: 17px;
+    width: 112px;
 }
 
 /* NAVIGATION BAR ********************************************************/
@@ -209,14 +209,14 @@ body.login .pace{
 }
 
 #serverList ul li {
-    margin-top: 10px;
+    border-bottom: 1px solid #eee;
     padding: 5px 10px 5px 10px;
-    background:rgba(255,255,255,0.3);
+   /* background:rgba(255,255,255,0.3);*/
 }
 
 
 #serverList ul li:nth-child(odd) {
-    background:rgba(255,255,255,0.4);
+   /*background:rgba(255,255,255,0.4);*/
 }
 
 #serverList ul li:first-child {
