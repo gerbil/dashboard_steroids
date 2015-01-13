@@ -13,20 +13,6 @@ angular
     })
     .controller('loginController', function ($scope, supersonic, $resource, Login) {
 
-        supersonic.ui.drawers.updateOptions({
-            shadow: true,
-            animation: {
-                type: "slide",
-                duration: 1.0
-            },
-            gestures: {
-                open: ["PanNavBar", "PanCenterView"],
-                close: ["TapNavBar", "TapCenterview"]
-            }
-        });
-
-
-
         // Check localStorage for apikey
         var apikey = window.localStorage.getItem('apikey');
 

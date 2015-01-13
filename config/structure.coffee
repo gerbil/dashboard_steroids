@@ -12,6 +12,7 @@ module.exports =
       showOnAppLoad: false
     options:
       animation: "swingingDoor"
+      openGestures: []
     right:
       id: "settings"
       location: "settings#settings"

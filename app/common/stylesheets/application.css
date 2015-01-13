@@ -3,7 +3,7 @@
 
 /* BG *******************************************************************/
 body {
-    background: url('/background/background2.jpg') no-repeat;
+    background: #00558F;
     font-family: 'Ek Mukta', sans-serif;
     font-size: 13px;
     color: #676a6c;
@@ -29,9 +29,9 @@ body {
 #loadingPage .center {
     margin-left: auto;
     margin-right: auto;
-    background: url('/background/loading.gif') no-repeat;
-    height: 500px;
-    width: 500px;
+    background: url('/background/loading.gif') 100% no-repeat;
+    height: 125px;
+    width: 125px;
 }
 
 /* NAVIGATION BAR ********************************************************/
