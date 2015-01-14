@@ -1,12 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Ek+Mukta:200,400);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
 
 
 /* BG *******************************************************************/
 body {
-    background: url('/background/background.jpg') 100% no-repeat;
-    font-family: 'Ek Mukta', sans-serif;
+    /*background: url('/background/background.jpg') 100% no-repeat;*/
+    background: #e0e0de;
+    font-family: 'Oswald', sans-serif;
     font-size: 13px;
-    color: #676a6c;
+    color: #192229;
     overflow-x: hidden;
     font-size: 8px;
 }
@@ -36,13 +37,8 @@ body {
 
 /* NAVIGATION BAR ********************************************************/
 
-.supersonic-navbar-mock {
-    background-color: #00B5FF !important;
-    text-align: center;
-    font-weight: 600;
-}
-
 .navBar {
+    background: #192229;
     margin-left: 0px !important;
     margin-right: 0px !important;
 }
@@ -51,7 +47,7 @@ body {
     color: #ffffff;
     font-size: 26px;
     text-align: center;
-    font-family: 'Ek Mukta', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: bold;
     padding-top: 3px;
 }
@@ -80,12 +76,12 @@ body {
 }
 
 #login .flat-form {
-    background: #0480be;
+    background: #192229;
     margin: 25px auto;
     width: 100%;
     height: 300px;
     position: relative;
-    color: #ffffff;
+    color: #e0e0de;
     padding: 25px;
     font-size: 14px;
 }
@@ -98,9 +94,9 @@ body {
     margin-bottom: 10px;
     padding-left: 15px;
     padding-top: 7px;
-    background: #136898;
+    background: #2e3336;
     border: none;
-    color: #ffffff;
+    color: #e0e0de;
     outline: none;
 }
 
@@ -111,9 +107,9 @@ body {
 #login .flat-form .button {
     border: none;
     display: block;
-    background: #136899;
+    background: #0b141b;
     height: 40px;
-    color: #ffffff;
+    color: #e0e0de;
     text-align: center;
     margin-top: 20px;
     -webkit-transition: all 0.15s linear;
@@ -122,21 +118,21 @@ body {
 }
 
 #login .flat-form ::-webkit-input-placeholder {
-    color: #149bdf;
+    color: #e0e0de;
 }
 
 #login .flat-form :-moz-placeholder {
     /* Firefox 18- */
-    color: #149bdf;
+    color: #e0e0de;
 }
 
 #login .flat-form ::-moz-placeholder {
     /* Firefox 19+ */
-    color: #149bdf;
+    color: #e0e0de;
 }
 
 #login .flat-form :-ms-input-placeholder {
-    color: #149bdf;
+    color: #e0e0de;
 }
 
 #login .flat-form input.ng-invalid {
@@ -204,16 +200,18 @@ body.login .pace{
 
 #serverList {
     margin: 5px;
-    color: #ffffff;
+    color: #2e3336;
     font-size: 24px;
 }
 
 #serverList ul li {
-    border-bottom: 1px solid #eee;
+    margin-top: 5px;
     padding: 5px 10px 5px 10px;
-   /* background:rgba(255,255,255,0.3);*/
+    background: #f9f9f9;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-left: 0.4em solid;
 }
-
 
 #serverList ul li:nth-child(odd) {
    /*background:rgba(255,255,255,0.4);*/
@@ -223,53 +221,63 @@ body.login .pace{
     margin-top: 0px;
 }
 
-
-#serverList ul li div.left {
-    width: 2%;
-    float: left;
-    margin-right: 10px;
+#serverList ul li div.serverName {
+    text-transform: uppercase;
 }
 
-#serverList ul li div.avk6b1 {
-    background: rgb(5, 133, 153);
+#serverList ul li div.serverDescription {
+    font-size: 12px;
 }
 
-#serverList ul li div.hgd0b1 {
-    background: rgb(214, 79, 42);
-}
-
-#serverList ul li div.hgd0b2 {
-    background: rgb(120, 185, 1);
-}
-
-#serverList ul li div.avos {
-    background: rgb(37, 114, 234);
-}
-
-#serverList ul li div.kstb1 {
-    background: rgb(223, 181, 1);
-}
-
-#serverList ul li div.hgdb1 {
-    background: rgb(245, 137, 3);
-}
-
-#serverList ul li div.f-other {
-    background: rgb(253, 119, 188);
-}
-
-#serverList ul li div.f-mobile {
-    background: rgb(253, 119, 188);
-}
-
-#serverList ul li div.test {
-    background: rgb(5, 133, 153);
-}
-
-#serverList ul li div.vostest {
-    background: rgb(0, 215, 203);
-}
-
-#serverList ul li i.right {
+#serverList ul li div.serverAlarmCount {
+    background: #c7254e;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 20px;
     float: right;
+    margin-top: -45px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#serverList ul li.avk6b1 {
+    border-color: #058599;
+}
+
+#serverList ul li.hgd0b1 {
+    border-color: #D64F2A;
+}
+
+#serverList ul li.hgd0b2 {
+    border-color: #78B901;
+}
+
+#serverList ul.avos {
+    border-color: #2572EA;
+}
+
+#serverList ul li.kstb1 {
+    border-color: #DFB501;
+}
+
+#serverList ul li.hgdb1 {
+    border-color: #F58903;
+}
+
+#serverList ul li.f-other {
+    border-color: #FD77BC;
+}
+
+#serverList ul li.f-mobile {
+    border-color: #FD77BC;
+}
+
+#serverList ul li.test {
+    border-color: #058599;
+}
+
+#serverList ul li.vostest {
+    border-color: #00D7CB;
 }

@@ -10,7 +10,7 @@ angular
         // Check localStorage for apikey
         var apikey = window.localStorage.getItem('apikey');
 
-        $scope.alarmInfo = Alarms.query({server: $scope.server, id: $scope.id, apikey: apikey});
+        $scope.alarmInfo = Alarms.query({server: $scope.server, id: $scope.id});
 
         $scope.saveAlarm = function (alarmInfo) {
             Alarms.update({apikey: apikey, server: $scope.server, id: $scope.id, envname: alarmInfo[0].ENVNAME, checkname: alarmInfo[0].CHECKNAME, description: alarmInfo[0].DESCRIPTION, status: alarmInfo[0].STATUS, curvalue: alarmInfo[0].CURVALUE, vallimit: alarmInfo[0].VALLIMIT, limitmark: alarmInfo[0].LIMITMARK, sqlscript: alarmInfo[0].SQLSCRIPT, active: alarmInfo[0].ACTIVE, sendto: alarmInfo[0].SENDTO, alarmtype: alarmInfo[0].ALARMTYPE, starttime: alarmInfo[0].START_TIME, endtime: alarmInfo[0].END_TIME},

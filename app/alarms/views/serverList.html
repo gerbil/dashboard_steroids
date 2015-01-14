@@ -16,10 +16,10 @@
 
     <div id="serverList">
         <ul>
-            <li ng-repeat="server in serverList" ng-click="openAlarmsList(server)">
-                <div class="{{server}} left">&nbsp;</div>
-                {{server | uppercase}}
-                <i class="icon super-ios7-arrow-right right"></i>
+            <li ng-repeat="server in serverList" ng-click="openAlarmsList(server.name)" class="{{server.name}}">
+                <div class="serverName">{{server.name}}</div>
+                <div class="serverDescription">{{server.description}}</div>
+                <div class="serverAlarmCount">{{server.alarmCount}}</div>
             </li>
         </ul>
     </div>
