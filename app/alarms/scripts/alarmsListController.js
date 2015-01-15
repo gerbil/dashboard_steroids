@@ -19,7 +19,7 @@ angular
 
         // Set interval for the refresh
         // Promise should be created to be deleted afterwards
-        var promise = $interval(refreshData, 15000);
+        var promise = $interval(refreshData, 1500000);
 
         // Cancel interval on page changes
         $scope.$on('$destroy', function () {

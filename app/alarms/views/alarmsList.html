@@ -6,13 +6,23 @@
         <div class="settingsBtn col-10" ng-click="openSettings()"></div>
     </div>
 
-    <div class="list card alarms">
+    <!--<div class="list card alarms">
         <a ng-repeat="alarm in alarmsList" class="item item-icon-left item-icon-right" ng-click="openModal(alarm.ID)">
             <i class="icon {{(alarm.STATUS == 'ALARM' && alarm.ACTIVE == 'YES') ? 'super-ios7-close-empty' : 'super-ios7-checkmark-empty'}}"></i>
             <i class="icon super-ios7-arrow-down"></i>
             {{alarm.CHECKNAME}}
-            <!--  <span class="badge badge-assertive">2</span>  -->
         </a>
+    </div>-->
+
+    <div id="alarmsList">
+        <ul>
+            <li ng-repeat="alarm in alarmsList" ng-click="openModal(alarm.ID)" class="{{(alarm.STATUS == 'ALARM' && alarm.ACTIVE == 'YES') ? 'alarm' : 'ok'}}">
+                <div class="alarmListStatus"><i class="icon {{(alarm.STATUS == 'ALARM' && alarm.ACTIVE == 'YES') ? 'super-alert-circled' : 'super-checkmark-circled'}}"></i></div>
+                <div class="alarmListName">{{alarm.CHECKNAME}}</div>
+                <div class="alarmListRight"><i class="icon super-ios7-arrow-down"></i></div>
+            </li>
+        </ul>
     </div>
+
 
 </div>

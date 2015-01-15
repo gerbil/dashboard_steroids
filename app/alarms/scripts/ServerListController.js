@@ -6,6 +6,7 @@ angular
             {server: '@server'},
             {
                 list: {method: 'GET', isArray: false},
+                getcount: {method: 'GET', isArray: true, params: {action: 'getcount'}},
                 add: {method: 'POST', params: {action: 'add'}},
                 delete: {method: 'POST', params: {action: 'delete', id: '@id'}},
                 update: {method: 'POST', params: {action: 'update', id: '@id'}}
@@ -19,6 +20,10 @@ angular
         Alarms.list(function (data) {
             $scope.serverList = data.servers;
 
+            for (var index = 0; index < $scope.serverList.length; ++index) {
+                getcount(index, $scope.serverList[index].name);
+            }
+
             /*for (var index = 0; index < $scope.serverList.length; ++index) {
 
                 var serverView = new steroids.views.WebView({
@@ -30,6 +35,13 @@ angular
             }*/
 
         });
+
+        // Get alarms count for a servers from backend alarms factory API
+        function getcount(index, server) {
+            Alarms.getcount({server: server}, function (data) {
+                $scope.serverList[index]['alarmCount'] = data[0].ALARMS;
+            });
+        };
 
         $scope.openMenu = function () {
             supersonic.ui.drawers.open('left').then(function () {

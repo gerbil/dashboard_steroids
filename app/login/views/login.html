@@ -1,30 +1,28 @@
-<div ng-controller="loginController">
+<div ng-controller="loginController" class="outer">
 
-    <div id="login">
-        <div class="center">
-            <div class="flat-form">
-                <div class="form-action show">
-                    <h1>Provident app</h1>
+    <div class="container">
 
-                    <p>
-                        In order to use Provident app you must connect to a TELE2 VPN network!
-                    </p>
+        <div id="login">
 
-                    <form name="loginForm" novalidate>
-                        <ul>
-                            <li>
-                                <input type="text" placeholder="Username" name="username" ng-model="username"/>
-                            </li>
-                            <li>
-                                <input type="password" placeholder="Password" name="password" ng-model="password"/>
-                            </li>
-                            <li>
-                                <input type="submit" value="Login" class="button" ng-disabled="loginForm.$pristine" ng-click="login()"/>
-                            </li>
-                        </ul>
-                    </form>
-                </div>
-            </div>
+            <p class="logo">Provident app</p>
+
+            <form name="loginForm" novalidate>
+
+                <fieldset class="clearfix">
+
+                    <p><span class="icon super-person"></span><input type="text" placeholder="Username" name="username" ng-model="username"></p>
+                    <p><span class="icon super-locked"></span><input type="password" placeholder="Password" name="password" ng-model="password"></p>
+                    <!--ng-disabled="loginForm.$pristine"-->
+                    <p><input type="submit" value="Sign In" class="button"  ng-click="login()"></p>
+
+                </fieldset>
+
+            </form>
+
+            <p>Need an access? Send email to provident@tele2.com</p>
+
         </div>
+
     </div>
+
 </div>

@@ -1,13 +1,34 @@
-@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
 /* BG *******************************************************************/
 body {
     /*background: url('/background/background.jpg') 100% no-repeat;*/
-    background: #e0e0de;
-    font-family: 'Oswald', sans-serif;
+    /*background: #e0e0de;*/
+    background: #192229;
+    font-family: 'Open Sans', sans-serif;
     font-size: 13px;
-    color: #192229;
+    color: #e0e0de;
     overflow-x: hidden;
     font-size: 8px;
 }
@@ -69,71 +90,90 @@ body {
 
 
 /* LOGIN *****************************************************************/
-#login .center {
-    width: 300px;
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    color: #B5B7BA;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#login {
+    color: #f5f5f5;
+    width: 280px;
+    border: 0 none;
     margin-left: auto;
     margin-right: auto;
 }
 
-#login .flat-form {
-    background: #192229;
-    margin: 25px auto;
-    width: 100%;
-    height: 300px;
-    position: relative;
-    color: #e0e0de;
-    padding: 25px;
-    font-size: 14px;
-}
-
-#login .flat-form form input[type=text],
-#login .flat-form form input[type=text],
-#login .flat-form form input[type=password] {
-    width: 100%;
-    height: 40px;
+#login p.logo {
+    /*background: url("/background/logo.png") 100% no-repeat;*/
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
     margin-bottom: 10px;
-    padding-left: 15px;
-    padding-top: 7px;
-    background: #2e3336;
-    border: none;
-    color: #e0e0de;
-    outline: none;
+    width: 240px;
+    height: 50px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-#login .flat-form form input[type=submit] {
-    width: 100%;
-}
-
-#login .flat-form .button {
-    border: none;
+#login form span {
+    background-color: #363b41;
     display: block;
-    background: #0b141b;
-    height: 40px;
-    color: #e0e0de;
+    float: left;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
-    margin-top: 20px;
-    -webkit-transition: all 0.15s linear;
-    -moz-transition: all 0.15s linear;
-    transition: all 0.15s linear;
+    width: 50px;
+    font-size: 20px;
+    color: #646769;
 }
 
-#login .flat-form ::-webkit-input-placeholder {
-    color: #e0e0de;
+#login form input {
+    height: 50px;
+    border: 0px none;
+    border-radius: 0px;
+    font-size: 14px;
+    line-height: 1.5em;
+    padding: 0;
 }
 
-#login .flat-form :-moz-placeholder {
-    /* Firefox 18- */
-    color: #e0e0de;
+#login form input[type="text"], #login input[type="password"] {
+    background-color: #3b4148;
+    color: #B5B7BA;
+    margin-bottom: 1em;
+    padding: 0 16px;
+    width: 230px;
 }
 
-#login .flat-form ::-moz-placeholder {
-    /* Firefox 19+ */
+#login form input[type="submit"] {
+    background-color: #ea4c88;
     color: #e0e0de;
+    font-weight: bold;
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    width: 280px;
+    border: 0 none;
 }
 
-#login .flat-form :-ms-input-placeholder {
-    color: #e0e0de;
+#login form input[type="submit"]:hover {
+    background-color: #d44179;
 }
+
+#login > p {
+    text-align: center;
+}
+
+#login > p span {
+    padding-left: 5px;
+}
+
 
 #login .flat-form input.ng-invalid {
     border: 1px solid red !important;
@@ -196,25 +236,27 @@ body.login .pace{
 }
 
 
-/* SERVER LIST **************************************************************/
+/* SERVER & ALARM LIST **************************************************************/
 
-#serverList {
-    margin: 5px;
-    color: #2e3336;
+#serverList, #alarmsList {
     font-size: 24px;
 }
 
-#serverList ul li {
-    margin-top: 5px;
+#serverList ul li, #alarmsList ul li {
+    margin-top: 2px;
     padding: 5px 10px 5px 10px;
-    background: #f9f9f9;
+    background: #363b41;
+    color: #e0e0de;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
     border-left: 0.4em solid;
 }
 
-#serverList ul li:nth-child(odd) {
-   /*background:rgba(255,255,255,0.4);*/
+#alarmsList ul li {
+    font-size: 18px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: 0px none;
 }
 
 #serverList ul li:first-child {
@@ -254,7 +296,7 @@ body.login .pace{
     border-color: #78B901;
 }
 
-#serverList ul.avos {
+#serverList ul li.avos {
     border-color: #2572EA;
 }
 
@@ -280,4 +322,35 @@ body.login .pace{
 
 #serverList ul li.vostest {
     border-color: #00D7CB;
+}
+
+#alarmsList ul li.ok div.alarmListStatus, #alarmsList ul li.alarm div.alarmListStatus {
+    float: left;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    margin: -10px 10px 0 0;
+}
+
+#alarmsList ul li.ok div.alarmListStatus {
+    color: green;
+}
+
+#alarmsList ul li.alarm div.alarmListStatus {
+    color: red;
+}
+
+#alarmsList ul li div.alarmListStatus i {
+    font-size: 30px;
+}
+
+#alarmsList ul li div.alarmListName {
+
+}
+
+#alarmsList ul li div.alarmListRight {
+    float: right;
+    font-size: 30px;
+    margin-top: -35px;
 }
