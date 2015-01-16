@@ -26,13 +26,13 @@ angular
 
             /*for (var index = 0; index < $scope.serverList.length; ++index) {
 
-                var serverView = new steroids.views.WebView({
-                    location: 'app/alarms/alarmsList.html?server=' + $scope.serverList[index],
-                    id: $scope.serverList[index]
-                });
+             var serverView = new steroids.views.WebView({
+             location: 'app/alarms/alarmsList.html?server=' + $scope.serverList[index],
+             id: $scope.serverList[index]
+             });
 
-                serverView.preload({id: $scope.serverList[index]});
-            }*/
+             serverView.preload({id: $scope.serverList[index]});
+             }*/
 
         });
 
