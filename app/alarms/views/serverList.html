@@ -11,7 +11,7 @@
             <li ng-repeat="server in serverList" ng-click="openAlarmsList(server.name)" class="{{server.name}}">
                 <div class="serverName">{{server.name}}</div>
                 <div class="serverDescription">{{server.description}}</div>
-                <div class="serverAlarmCount"><h3 class="insetshadow">{{server.alarmCount}}</h3></div>
+                <div class="serverAlarmCount"><div class="round">{{server.alarmCount}}</div></div>
             </li>
         </ul>
     </div>
